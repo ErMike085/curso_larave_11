@@ -20,35 +20,8 @@ Route::get('/posts/{post}/{category?}', function ($post, $category = null) {
 });
 
 Route::get('prueba', function () {
+    $post = Post::find(1);
 
-    // Crear nuevo post
-    // $post = new Post;
-
-    // $post->title = 'Título de prueba 3';
-    // $post->content = 'Contenido de prueba 3';
-    // $post->category = 'Categoría de prueba 3';
-
-    // $post->save();
-
-    // return $post;
-
-    // $post = Post::find(1);
-
-    // Acualizar registro
-
-    // $post = Post::where('title', 'Título de prueba 1')->first();
-
-    // $post->category = 'Desarrollo web';
-
-    // $post->save();
-    // return $post;
-
-    // Listar todos los post
-    // $post = Post::orderBy('category', 'asc')->select('id', 'title', 'category')->take(2)->get();
-
-    // $post = Post::find(1);
-
-    // $post->delete();
-
-    // return $post;
+    dd($post->is_active);
+    // return $post->is_active;
 });
