@@ -17,17 +17,11 @@ class UserSeeder extends Seeder
         $user = new User();
 
         $user->name = 'Miguel Muñoz';
-        $user->email = 'miguel@correo.com';
+        $user->email = 'mmunozortiz706@gmail.com';
         $user->password = bcrypt('12345678');
 
         $user->save();
 
-        $user = new User();
-
-        $user->name = 'Miguel Muñoz 2';
-        $user->email = 'miguel2@correo.com';
-        $user->password = bcrypt('12345678');
-
-        $user->save();
+        User::factory(10)->create();
     }
 }
